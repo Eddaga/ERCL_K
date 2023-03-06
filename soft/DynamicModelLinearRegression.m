@@ -2,19 +2,15 @@
 % energy = integral(IVdt) = integral(Fds)
 % I , V -> EV motor Voltage and Current.
 % F     -> traction force, s-> moving distance
-% P = F * (ds/dt) = Fv = Fr+Fa+Fg+Fi+Fb ≈ Fr+Fg+Fi ≈ (α+βsinθ+γa)mv
 
-% Fr -> rolling     resistance
-% Fa -> aerodynamic resistance
-% Fg -> gradient    resistance
-% Fi -> inertia     resistance
-% Fb -> brake force proveded by hydraulic brake
+% P = F * (ds/dt) = F_{V} = F_{R} + F_{A} + F_{G} + F_{I} + F_{B} 
 
-% Fr ∝ C_{rr}*W, Fa ∝ 1/2 *ρC_{d}Av2 , Fg ∝ W sinθ, Fi ∝ ma
-% p -> rPth, cd -> rPth, A -> rPtn, v^2 ->
-% in reference thesis, Fa is ignored because of vehicle's limited speed(34km/h)
-% but our vehicle is for high speed racing, so Fa must considered.
-% W --> vehicle weight,ρ --> C_{d} --> A -->car frontal area, v --> vehicle speed, θ --> road slope, m-> vehicle mass, 
+%where
+%F_{R} : rolling     resistance                     ∝ C_{rr}*W
+%F_{A} : aerodynamic resistance                     ∝ 1/2 *ρC_{d}Av2
+%F_{G} : gradient    resistance                     ∝ W sinθ
+%F_{I} : inertia     resistance                     ∝ ma
+%F_{B} : brake force proveded by hydraulic brake
 
 % C_{rr} : rolling resistance coefficient
 % W      : vehicle weight
@@ -25,14 +21,16 @@
 % m      : vehicle mass
 % a      : vehicle acceleration
 
+% in reference thesis, Fa is ignored because of vehicle's limited speed(34km/h)
+% but our vehicle is for high speed racing, so Fa must considered.
+
+% So, F_{V} ≈ (α+βsinθ+γa+)mv + δv^2 
 
 % α is rolling     resistance
 % β is gradient    resistance
 % γ is inertia     resistance
 % δ is aerodynamic resistance
 
-
-% (α+βsinθ+γa+)mv + δv^2 
 % (α+βsinθ+γa)v + δv^2
 
 % θ -> in frontyard drive, it's always 0
