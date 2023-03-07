@@ -1,3 +1,7 @@
+
+% git passwd = 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
+% fucking git cola.. give me linux-cola!!!
+
 % This Code based on "Power Consumption Characterization, Modeling and Estimation of Electric Vehicles"
 % energy = integral(IVdt) = integral(Fds)
 % I , V -> EV motor Voltage and Current.
@@ -37,3 +41,5 @@
 % so, the P equation is
 % P = (α+γa)v + δv^2
 
+% i think it equals to
+% Y = aX_{1} + bX_{1}X_{2} + cX_{1}*X_{1}
